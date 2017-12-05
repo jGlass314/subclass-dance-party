@@ -34,18 +34,19 @@ $(document).ready(function() {
 //    console.log(dancer);
     $('body').append(dancer.$node);
     var moveleft = true;
-    $('.hide, .dancer').on("mouseover", function(event) {
+    $('.homer, .dancer').on("click", function(event) {
       console.log('this:',this);
       
       if (moveleft === true) {
-        $(this).animate({left: '250px'}, 'fast');
+        $(this).animate({'margin-left': '250px'}, 'slow');
         moveleft = false;
       } else {
-        $(this).animate({left: '500px'}, 'fast');
+        $(this).animate({'margin-left': '500px'}, 'slow');
         moveleft = true;
       }
     });
   });
+
   $('.lineUpDancers').on('click', function(event) {
     var topDrift = 500;
     var sideDrift = 0;
@@ -58,5 +59,14 @@ $(document).ready(function() {
   var eachDancer = document.getElementsByClassName('dancer');
   console.log(eachDancer);
 
+  $('.interactiveDancers').on('click', function(event) {
+    console.log(window.dancers);
+    var ani = function() {
+      console.log($('.homer'));
+      $('.homer').animate({'margin-left': '80%'}, 6000).animate({'margin-left': '0%'}, 6000, ani);
+      
+    };
+    ani();
+  });
   
 });
