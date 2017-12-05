@@ -1,7 +1,7 @@
-class SlowDancer extends Dancer {
+var SlowDancer = class extends BlinkyDancer {
   constructor(top, left, timeBetweenSteps) {
-    super(top, left, timeBetweenSteps * 0.5);
+    super(top, left, timeBetweenSteps * 2);
   }
   
 
-}
+};

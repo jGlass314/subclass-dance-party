@@ -1,5 +1,5 @@
 // Creates and returns a new dancer object that can step
-class Dancer {
+var Dancer = class {
   constructor(top, left, timeBetweenSteps) {
     this.top = top;
     this.left = left;
@@ -19,4 +19,4 @@ class Dancer {
     };
     this.$node.css(styleSettings);
   }
-}
+};

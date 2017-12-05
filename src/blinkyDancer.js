@@ -1,4 +1,4 @@
-class BlinkyDancer extends Dancer {
+var BlinkyDancer = class extends Dancer {
   constructor(top, left, timeBetweenSteps) {
     super(top, left, timeBetweenSteps);
   }
@@ -20,4 +20,4 @@ class BlinkyDancer extends Dancer {
   //   blinkyDancer.$node.toggle();
   // };
 
-}
+};
