@@ -19,4 +19,5 @@ var Dancer = class {
     };
     this.$node.css(styleSettings);
   }
+  
 };
