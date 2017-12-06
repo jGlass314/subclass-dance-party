@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  width:100%;
 }
 body{
   margin: 0px;
@@ -35,4 +36,19 @@ body, a:link, a:visited, a:active{
 .homer img {
   width:200px;
   height:200px;
+}
+.slowDancer {
+  position:absolute;
+}
+.slowDancer img {
+  height:200px;
+  width:200px;
+}
+.flipped {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
 }
