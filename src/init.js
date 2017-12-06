@@ -35,22 +35,22 @@ $(document).ready(function() {
   
   $('body').on('click', '.homer, .dancer', function(event) {
     if (this.moveLeft === true) {
-      $(this).animate({'margin-left': '+=100px'}, 'slow');
+      $(this).animate({'left': '+=100px'}, 'slow');
       this.moveLeft = false;
     } else {
-      $(this).animate({'margin-left': '-=100px'}, 'slow');
+      $(this).animate({'left': '-=100px'}, 'slow');
       this.moveLeft = true;
     }
   });
-
   
-  $('body').on('click', '.slowDancer', function(event) {
-    console.log('registered slowDancer event');
+  $('body').on('click', '.slowDancer img', function(event) {
     if (this.moveUp === true) {
-      $(this).animate({'margin-top': '-=300px', 'height': '200px', 'width': '200px'}, 3000);
+      console.log('slowDancer top:', $(this).css('top'));
+      $(this).animate({'top': '-=300px', 'height': '200px', 'width': '200px'}, 3000);
       this.moveUp = false;
     } else {
-      $(this).animate({'margin-top': '+=300px', 'height': '400px', 'width': '400px'}, 3000);
+      console.log('slowDancer top:', $(this).css('top'));
+      $(this).animate({'top': '+=300px', 'height': '300px', 'width': '300px'}, 3000);
       this.moveUp = true;
     }
   });
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
   $('.interactiveDancers').on('click', function(event) {
     var ani = function() {
-      $('.homer').animate({'margin-left': '80%'}, 6000).animate({'margin-left': '0%'}, 6000, ani);
+      $('.homer').animate({'left': '80%'}, 6000).animate({'left': '0%'}, 6000, ani);
     };
     ani();
   });

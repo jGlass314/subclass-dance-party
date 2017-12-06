@@ -5,26 +5,7 @@ var HomerDancer = class extends Dancer {
     this.$node = $('<span class="homer">' + gifString + '</span>');
     this.setPosition(top, left);
     this.moveLeft = true;
-/*
-    $('.homer').animate({'margin-left': '80%'}, 6000).animate({'margin-left': '0%'}, 6000, ani);
-      var homerSet = $('body').find('.homer');
-      
-      var homer1,
-        homer2;
-      for (var i = 1; i < homerSet.length; i++) {
-        homer1 = homerSet[i - 1];
-        homer2 = homerSet[i];
-         if (collision(homer1, homer2) === true) {
-          console.log('collision:',true);
-          $(homer1).animate({'margin-left': '80%'}, 6000).animate({'margin-left': '0%'}, 6000);
-          $(homer2).animate({'margin-left': '0%'}, 6000).animate({'margin-left': '80%'}, 6000);
-        } else {
-          console.log('collision:',false);
-        }
-      }
-    };
-*/
-//    console.log(this.$node);
+
   }
 
   step() {
@@ -34,18 +15,18 @@ var HomerDancer = class extends Dancer {
     var homer1,
       homer2;
     for (var i = 0; i < homerSet.length; i++) {
-      for(var j = 0; j < homerSet.length; j++) {
-        if(i === j) {
+      for (var j = 0; j < homerSet.length; j++) {
+        if (i === j) {
           continue;
         }
         homer1 = homerSet[i];
         homer2 = homerSet[j];
         if (this.collision(homer1, homer2) === true) {
-          console.log('collision:',true);
+          console.log('collision:', true);
           $(homer1).animate({'margin-left': '80%'}, 6000).animate({'margin-left': '0%'}, 6000);
           $(homer2).animate({'margin-left': '0%'}, 6000).animate({'margin-left': '80%'}, 6000);
         } else {
-          console.log('collision:',false);
+          console.log('collision:', false);
         }
       }
     }
